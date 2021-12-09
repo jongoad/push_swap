@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 13:54:33 by jgoad             #+#    #+#             */
-/*   Updated: 2021/12/07 18:20:28 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/09 15:01:07 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,7 +199,7 @@ void	create_chunks(t_stack **a, t_stack **b, int **actions, t_vars2 *vars)
 	}
 	//9. Push the top chunk from stack a to stack b. (chunk 1)
 	i = vars->chunk_size[1];
-	while (i >= 0)
+	while (i > 0)
 	{
 		push_b(b, a, actions);
 		i--;
@@ -207,6 +207,7 @@ void	create_chunks(t_stack **a, t_stack **b, int **actions, t_vars2 *vars)
 	//10. Push the smallest 50% of values from the top chunk in stack a to stack b. (chunk 2)
 	i = vars->chunk_size[2] + vars->chunk_size[3]; //Check notation on this line. Need to iterate through both chunks to seperate
 	rotate_count = 0;
+	push_count = 0;
 	while (i > 0)
 	{
 		//Push all of chunk 2

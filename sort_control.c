@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:34:02 by jgoad             #+#    #+#             */
-/*   Updated: 2021/12/07 17:24:55 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/09 15:09:25 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	sort_control(t_stack **a, t_stack **b)
 	printf("\nAction count: %d\n", i);
 	//Print our current stacks to see results
 	t_stack *tmp;
+	int count = 0;
 	tmp = *a;
 	printf("\nStack a after pushing:\n");
 	while (tmp)
@@ -59,8 +60,10 @@ void	sort_control(t_stack **a, t_stack **b)
 		printf("Index is: %d\n", tmp->index);
 		printf("Value is: %d\n\n", tmp->value);
 		tmp = tmp->next;
+		count++;
 	}
-
+	printf("Number of element in stack A: %d\n\n", count);
+	count = 0;
 	tmp = *b;
 	printf("\nStack b after pushing:\n");
 	while (tmp)
@@ -68,5 +71,7 @@ void	sort_control(t_stack **a, t_stack **b)
 		printf("Index is: %d\n", tmp->index);
 		printf("Value is: %d\n\n", tmp->value);
 		tmp = tmp->next;
+		count++;
 	}
+	printf("Number of element in stack B: %d\n\n", count);
 }

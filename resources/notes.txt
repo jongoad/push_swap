@@ -1,0 +1,82 @@
+Use linked lists to create the two stacks.
+
+The first argument will be at the TOP of the stack.
+
+Sorted output has lowest number first.
+
+Input is from command line arguments
+
+
+Approach:
+
+- Take raw input and parse to ensure input is valid.
+	- If input is invalid, display "Error" followed by a newline
+- Convert input into a linked list.
+
+- Run algorithm to find the shortest set of instructions.
+	- 
+- Output instructions 
+
+
+
+Thoughts:
+
+- Maybe find some information about the stack given to decide how to approach sort?
+	- What is the distribution of integers (is there an equation to produce a value representing the distribution?)
+	- What is the difference between largest and smallest
+- Next instruction will be based on the current state of stacks
+	- Should I create a recursive backtrack search to find best path??
+
+
+Errors:
+	- Value not a valid integers
+	- Duplicate values
+
+
+	https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
+	https://bestofcpp.com/repo/ttranche-push_swap
+
+	https://github.com/o-reo/push_swap_visualizer
+
+	https://en.wikipedia.org/wiki/Travelling_salesman_problem
+
+
+
+Hours Log:
+
+4.45
+3.34
+4.20
+6.01
+3.37
+5.19
+5.35
+8.10
+9.21
+
+4.28
+
+50 hours 42 mins
+
+
+./a.out "1 --+-+---2 3 4 5"
+
+./a.out 1	--		 2 3    4		 5
+
+Handle multiple signs
+
+Handle both single string input
+
+Work on error handling and parsing
+
+Stack A indices
+3 5 0
+
+Stack B indices
+
+4 1 2
+
+
+
+
+

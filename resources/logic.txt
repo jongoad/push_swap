@@ -1,0 +1,96 @@
+Solving Algorithm Logic Flow
+
+- Run a bubble sort or other sort algorithm to get the final order of the values
+- Apply an index value to each node based on its position in the solution state
+
+
+
+General Solution logic:
+
+- Keep any elements that are already in ascending order in Stack a.
+	- Find the largest group of elements that can be kpet in stack a.
+	- This can be done by starting at the list and running a test for each element in sequence.
+	- Whichever starting element allows least push actions is chosen.
+- Move any elements that are not in order to stack b.
+- When moving to stack b, ensure that values are placed in order.
+- Return values to stack a, inserting in the proper position.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-
+Starting conditions:
+
+Chunk 1 - Avg: 20.8
+01 - 12
+02 - 22
+03 - 3
+04 - 49
+05 - 18
+
+
+Chunk 2 - Avg: 27.2
+06 - 14
+07 - 44
+08 - 33
+09 - 7
+10 - 38
+
+---------------------------------
+Solution state:
+
+Stack a
+
+05 - 18
+01 - 12
+06 - 14
+03 - 3
+09 - 7
+
+Stack b
+
+02 - 22
+07 - 44
+08 - 33
+04 - 49
+10 - 38
+
+Run until there are no values in stack a larger than any values in stack b:
+	- Because we are not sorting explicitly within a single stack, we could target any value that is more/less than the midpoint
+	in order to reduce actions. Could find values that need to be moved but are close in relative position in both stacks to run
+	double actions.
+
+	Rotate until largest top A and smallest top b
+	push a->b && swap b && push b->A
+	Rotate until largest top A and smallest top b
+	push a->b && swap b && push b->A
+	Rotate until largest top A and smallest top b
+	push a->b && swap b && push b->A
+
+Now we have two stacks each containing the smallest and largest values respectively

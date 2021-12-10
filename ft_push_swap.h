@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:18:57 by jgoad             #+#    #+#             */
-/*   Updated: 2021/12/07 17:32:10 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/10 17:05:38 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ typedef struct s_vars2
 void	control(t_stack **a, t_stack **b);
 void	sort_control(t_stack **a, t_stack **b);
 
+
 //Parse functions
 int	parse_integer(char *str, int *n);
 int	parse_duplicate(t_stack* a);
@@ -112,8 +113,10 @@ void	asc_find_closest(t_stack *a, t_stack *b, t_vars **vars);
 void	chunk_sort(t_stack **a, t_stack **b, int **actions);
 t_vars2	*chunk_init_vars(t_stack **a, t_vars2 *vars);
 void	create_chunks(t_stack **a, t_stack **b, int **actions, t_vars2 *vars);
-
-
+int		check_sort_chunks(t_stack **stack, int direction);
+void	swap_chunks(t_stack **a, t_stack **b, int **actions, t_vars2 *vars);
+void	final_sort_chunks(t_stack **a, t_stack **b, int **actions, t_vars2 *vars);
+int		find_start_chunk(t_stack **stack, t_vars2 *vars, int chunk);
 
 //Utility functions
 int	write_err(void);

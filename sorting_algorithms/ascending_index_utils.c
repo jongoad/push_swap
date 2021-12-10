@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 14:06:25 by jgoad             #+#    #+#             */
-/*   Updated: 2021/11/28 19:51:11 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/10 15:13:56 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,6 @@ int	find_highest(t_stack *stack)
 	return (index);
 }
 
-
-//THIS IS CURRENTLY BREAKING STUFF
-//Infinite loop on rotate_a in first loop, seems like previous pointer is not being copied
 //Function to find the best direction to rotate a stack to get to the desired index
 int	asc_find_rotate_direction(t_stack *stack, int index)
 {

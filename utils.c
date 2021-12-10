@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 13:59:41 by jgoad             #+#    #+#             */
-/*   Updated: 2021/11/25 16:15:36 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/10 15:32:37 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //Function to write error and handle memory clearing
 int	write_err(void)
 {
-	ft_putstr_fd("Error\n", 1);
+	//ft_putstr_fd("Error\n", 1);
 	return (1);
 }
 

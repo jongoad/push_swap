@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:34:02 by jgoad             #+#    #+#             */
-/*   Updated: 2021/12/09 15:09:25 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/10 17:37:42 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sort_control(t_stack **a, t_stack **b)
 	int i;
 
 	//Array of strings to hold instructions
-	//char	*action_translate[11] = {"sa", "sb", "ss", "pa", "pb", "ra", "rb", "rr", "rra", "rrb", "rrr"};
+	char	*action_translate[11] = {"sa", "sb", "ss", "pa", "pb", "ra", "rb", "rr", "rra", "rrb", "rrr"};
 
 	i = -1;
 	while (i++ < 20000)
@@ -42,13 +42,15 @@ void	sort_control(t_stack **a, t_stack **b)
 	//printf("\nActions list:\n");
 	while (actions[i] != 0)
 	{
-		//printf("%s", action_translate[actions[i] - 1]);
+		printf("%s", action_translate[actions[i] - 1]);
 		//Print a newline unless the next action is empty
-		//if (actions[i + 1] != 0)
-		//	printf("\n");
+		if (actions[i + 1] != 0)
+			printf("\n");
 		i++;
 	}
+	//Debugging
 	
+	/*
 	printf("\nAction count: %d\n", i);
 	//Print our current stacks to see results
 	t_stack *tmp;
@@ -74,4 +76,8 @@ void	sort_control(t_stack **a, t_stack **b)
 		count++;
 	}
 	printf("Number of element in stack B: %d\n\n", count);
+	*/
+	//Free stacks before exiting?
+	free(*b);
+	stackclear(a);
 }

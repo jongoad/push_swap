@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:44:18 by jgoad             #+#    #+#             */
-/*   Updated: 2021/12/07 17:14:30 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/13 15:30:27 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main (void)
 	while (i < 24)
 	{
 		//Check if number is duplicate
-		stack[i] = rand() % 50;
+		stack[i] = rand() % 24;
 		i++;
 	}
 	i = 0;

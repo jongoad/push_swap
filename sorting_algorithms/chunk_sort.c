@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 13:54:33 by jgoad             #+#    #+#             */
-/*   Updated: 2021/12/10 17:51:04 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/13 16:55:31 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	chunk_sort(t_stack **a, t_stack **b, int **actions)
 }
 
 //Function to initialize vars struct
-//THIS WILL BREAK FOR ANY STACKS UNDER SIZE 8!!!!!!!!
+//THIS WILL BREAK FOR ANY STACKS UNDER SIZE 8!!!!!!
 //Rotations are pushing values over the top of the stack and back to the bottom, messing up order. Maybe need to rotate back afterwards (JANKY FIXED, LOOK HARDER). ALSO STACKS NOT EVEN AT THE END WITH EVEN INPUTS
 t_vars2	*chunk_init_vars(t_stack **a, t_vars2 *vars)
 {
@@ -84,7 +84,6 @@ t_vars2	*chunk_init_vars(t_stack **a, t_vars2 *vars)
 	}
 	return (vars);
 }
-//Might want to dynamically allocate/fill this array as we create chunks to prevent errors??
 
 //Function to control the creation of chunks
 void	create_chunks(t_stack **a, t_stack **b, int **actions, t_vars2 *vars)
@@ -477,6 +476,10 @@ int	check_sort_chunks(t_stack **stack, int direction)
 	}
 	return (1);
 }
+
+
+
+
 
 
 

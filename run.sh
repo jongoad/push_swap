@@ -1,8 +1,18 @@
 #!/bin/bash
-gcc -Wall -Wextra -Werror -I. -L/Users/jgoad/Projects/Cursus/push_swap/libft -lft -o push_swap push_swap.c parse_input.c llist_utils.c utils.c sorting_tools.c stack_setup.c sort_control.c ./sorting_algorithms/ascending_index.c ./sorting_algorithms/ascending_index_utils.c ./sorting_algorithms/chunk_sort.c
-./push_swap 9 40 39 44 41 49 22 1 42 13 15 35 7 16 43 25 37 32 27 38 28 4 17 6
+gcc -Wall -Wextra -Werror -I. -L/Users/jgoad/Projects/Cursus/push_swap/libft -lft -o push_swap push_swap.c parse_input.c llist_utils.c utils.c sorting_tools.c stack_setup.c sort_control.c ./sorting_algorithms/ascending_index.c ./sorting_algorithms/ascending_index_utils.c ./sorting_algorithms/chunk_sort.c ./sorting_algorithms/chunk_sort_2_copy.c ./sorting_algorithms/chunk_sort_utils.c ./sorting_algorithms/newsort.c
+./push_swap -71 -286 81 322 143 348 259 -284 51 228 -145 329 -117 191 -31 -268 -459 
 
 #9 40 39 44 41 49 22 1 42 13 15 35 7 16 43 25 37 32 27 38 28 4 17 6 - set of 24 random
 #"9", "40", "39", "44", "41", "49", "22", "1", "42", "13", "15", "35", "7", "16", "43", "25", "37", "32", "27", "38", "28", "4", "17", "6"
 #7 1 3 6 2 0 5 4 - set of 8 index matched
+#"7", "1", "3", "6", "2", "0", "5", "4"
 #"5", "0", "3", "1", "7", "2", "6", "4"
+# 10 22 5 17 0 6 11 23 19 14 3 2 9 21 18 12 1 4 20 15 16 7 13 8  set of 24 index matched
+
+# 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+
+#"204", "8", "77", "4", "-77", "-161", "-128", "-158", "152", "5", "-219", "-418", "-230", "181", "-441", "417"
+#343 -316 -25 130 438 -299 -305 432 -185 439
+# "-71", "-286", "81", "322", "143", "348", "259", "-284", "51", "228", "-145", "329", "-117", "191", "-31", "-268", "-459"
+#-316 -468 -427 311 -8 237 -440 431 309 -436 390 131 -41 303 34 -286 141 -497 64 38 -254 -483 418 -284 -443 331
+#"-316", "-468", "-427", "311", "-8", "237", "-440", "431", "309", "-436", "390", "131", "-41", "303", "34", "-286", "141", "-497", "64", "38", "-254", "-483", "418", "-284", "-443", "331"

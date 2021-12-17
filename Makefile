@@ -1,5 +1,5 @@
 SRCS			= push_swap.c parse_input.c sort_control.c stack_setup.c llist_utils.c utils.c sorting_tools.c sorting_algorithms/ascending_index.c \
-				  sorting_algorithms/ascending_index_utils.c sorting_algorithms/chunk_sort.c
+				  sorting_algorithms/ascending_index_utils.c sorting_algorithms/chunk_sort.c sorting_algorithms/chunk_sort_2_copy.c sorting_algorithms/chunk_sort_utils.c sorting_algorithms/newsort.c
 
 OBJS			= $(SRCS:.c=.o)
 

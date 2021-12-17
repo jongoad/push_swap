@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:18:19 by jgoad             #+#    #+#             */
-/*   Updated: 2021/12/09 15:00:56 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/16 15:02:55 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,3 +77,12 @@ int	main(int argc, char *argv[])
 //Can i intentionally "prime" stacks into a position where the most efficient operation is a double action?
 
 //What if I sort stack a to have largest numbers at the top, and stack b to have smallest numbers at the top?
+
+
+
+
+//What is the base case?
+
+
+
+

@@ -6,7 +6,7 @@
 /*   By: jgoad <jgoad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:18:57 by jgoad             #+#    #+#             */
-/*   Updated: 2021/12/10 17:05:38 by jgoad            ###   ########.fr       */
+/*   Updated: 2021/12/16 15:02:41 by jgoad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,34 @@ typedef struct s_vars2
 	//Can also be stored in an array
 
 }	t_vars2;
+
+
+typedef struct s_vars3
+{
+	//Chunk manipulation vars
+    int chunk_count;
+    int chunk_size[20];
+    int chunk_start[20];
+    int chunk_end[20];
+    int keep_indices[500];
+    int keep_count;
+
+	//General Vars
+    int stack_size_a;
+    int stack_size_b;
+    int start_index;
+
+	//Vars for find_closest function
+	int distance;
+	int count_a;
+	int count_b;
+	int target_index_a;
+	int target_index_b;
+	int distance_a;
+	int distance_b;
+    
+
+}   t_vars3;
 
 //Main functions
 void	control(t_stack **a, t_stack **b);
@@ -146,5 +174,32 @@ t_stack	*rev_rotate_a(t_stack *a, int **actions);
 t_stack	*rev_rotate_b(t_stack *b,int **actions);
 void	rev_rotate_both(t_stack **a, t_stack **b,int **actions);
 
+
+
+
+//Chunk sort new
+void    chunk_sort_new(t_stack **a, t_stack **b, int **actions);
+t_vars3 *init_vars_3(t_stack **a, t_vars3 *vars);
+t_vars3 *init_chunk_info(t_vars3 *vars, int chunk_count);
+void    chunk_keep_indices(t_stack **a, t_vars3 *vars);
+void    chunk_push_remain(t_stack **a, t_stack **b, int **actions, t_vars3 *vars);
+int 	check_keep(int index, t_vars3 *vars);
+int 	get_chunk_count(int chunk, t_vars3 *vars);
+void    chunk_push_order(t_stack **a, t_stack **b, int **actions, t_vars3 *vars);
+int 	get_largest_index(t_stack *stack);
+int 	get_smallest_index(t_stack *stack);
+
+void	chunk_find_closest(t_stack *a, t_stack *b, t_vars3 *vars, int chunk);
+int		chunk_find_rotate_direction(t_stack *stack, int index);
+void	chunk_push_match(t_stack **a, t_stack **b, t_vars3 *vars, int **actions);
+void    chunk_rotate_to_target(t_stack **stack, int target_index, int **actions, char c);
+int 	chunk_count_elements(t_stack *stack, int chunk, t_vars3 *vars);
+
+
+
+//Recursive
+void    recursive_stack_sort(t_stack **a, t_stack **b, int **actions, int first);
+int 	is_sorted(t_stack **a, int tot_count);
+int		find_lowest_above_sort_end(t_stack *stack, int sort_end);
 
 #endif
